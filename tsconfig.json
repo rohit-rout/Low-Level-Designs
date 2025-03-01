@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "ES2022",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "paths": {
+      "*": ["./src/*"]
+    },
+    // Add these new options
+    "emitDecoratorMetadata": false,
+    "allowImportingTsExtensions": false,
+    "noEmit": false
+  }
+}
