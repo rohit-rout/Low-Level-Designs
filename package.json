@@ -1,0 +1,23 @@
+{
+  "name": "low-level-designs",
+  "version": "1.0.0",
+  "description": "This repo contains low level design on various industry level standards",
+  "main": "dist/app.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohit-rout/Low-Level-Designs.git"
+  },
+  "author": "rohit rout",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohit-rout/Low-Level-Designs/issues"
+  },
+  "homepage": "https://github.com/rohit-rout/Low-Level-Designs#readme"
+}
