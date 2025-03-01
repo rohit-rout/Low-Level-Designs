@@ -1,12 +1,12 @@
 import { CustomModule } from "./abstractClass.js";
-import { User } from "./concreteClass.js";
+import { BasicUserFactory, OAuthStrategy, User } from "./concreteClass.js";
  
 export class LinkedInModule extends CustomModule {
-    user = new User('user_1','basic');
+    userFactory = new BasicUserFactory();
+    auth = new OAuthStrategy();
 
      run() {
-        this.user.getProfile();
-        console.log('hello');
+         this.userFactory.login('google',this.auth);
     }
 
 }
