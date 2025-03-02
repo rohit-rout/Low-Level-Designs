@@ -1,4 +1,5 @@
 import { User } from "./concreteClass.js";
+import { AuthStrategy } from "./interface.js";
 
 export abstract class CustomModule {
     abstract run(): void;
@@ -6,21 +7,20 @@ export abstract class CustomModule {
 
 
 export abstract class UserFactory {
-    abstract createUser(type: 'basic' | 'premium'): User;
+    abstract createUser(type: 'basic' | 'premium',info?:any): User;
 
-    async login(credentials: any,auth:any) {
+    async login(credentials: any,auth:AuthStrategy) {
         try {
-           await auth.authenticate(credentials); 
-        
+            await auth.authenticate(credentials);
         } catch (error) {
             console.log(error);
         }
     }
 
-    register(credentials: any, auth:any) {
+    async register(credentials: any, auth:AuthStrategy) {
         try {
             auth.register(credentials);
-            return this.createUser('basic');
+            return this.createUser(credentials);
         } catch (error) {
             console.log(error);
         }
