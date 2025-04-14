@@ -1,4 +1,5 @@
-import { CustomModule } from "./abstractClass.js";
+
+import { CustomModule } from "../common.js";
 import {
   BasicUserFactory,
   EmailPasswordStrategy,
