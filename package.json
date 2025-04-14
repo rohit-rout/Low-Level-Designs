@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node dist/app.js",
+    "start": "npx tsc && node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc"
   },
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/rohit-rout/Low-Level-Designs/issues"
   },
-  "homepage": "https://github.com/rohit-rout/Low-Level-Designs#readme"
+  "homepage": "https://github.com/rohit-rout/Low-Level-Designs#readme",
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
 }
