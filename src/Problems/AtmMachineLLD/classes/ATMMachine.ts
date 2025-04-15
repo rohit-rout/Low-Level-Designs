@@ -35,11 +35,23 @@ export class ATM implements ATMMachineInterface {
     this.notes.set(noteValue, noteCount);
   }
 
+  public getBalance() {
+    let balance = 0;
+    for(let entry of  this.notes) {
+       let [key, value] = entry;
+       balance+= key*value;
+    }
+    return balance;
+  }
+
   public getNotes(denomination: number) {
     return this.notes.get(denomination);
   }
 
-  public printATMStatus() {
-    console.log(this.notes);
+  public printATMBalanceStatus() {
+    for(const entry of this.notes) {
+      const [key, value] = entry;
+      console.log(`you have ${value} notes of ${key}`);
+    }
   }
 }
